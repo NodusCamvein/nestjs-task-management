@@ -8,11 +8,22 @@ From the very basics, when we're talking about Modules, Controllers, Providers, 
 
 Was introduced to NestJS Pipes, and their @Injectable decorator with transform() methods. Global, Handler-level and Parameter-level pipes and their uses. Validation pipes, error handling, and filters.
 
-The use of ORM's, specifically TypeORM, with its pros and cons, and the refactoring of the inital code. Data Mapper vs Active Record, simplification of code and dependency of its strengths. Setting up a connection to a database, and extensive use of entities and repositories, with emphasis on data persistence and restructuring of the previous crud setup.
+The use of ORM's, specifically TypeORM, with its pros and cons, and the refactoring of the inital code. Data Mapper vs Active Record, simplification of code and dependency of its strengths. Setting up a connection to a database, and extensive use of columns, entities and repositories, with emphasis on data persistence and restructuring of the previous crud setup.
+
+Went through a good amount of authentication and authorization content, the use of Postman, Docker, PostgreSQL, and pgAdmin for task simulations and observations.
+
+Learned about JWT, its structure, and every detail regarding authentication and authorization. From "strong" passwords, bearer tokens, hashing, salts, bcrypt, to signups and signins, requests and validations, and got a decent grasp on error handling, while being able to identify them with console logs.
+
+Further emphasis on tasks and users, with database relation. Introduction to OneToMany and ManyToOne, have users create their own tasks and implemented nestjs logger.
+
+I was surprised that configurations were a "thing", it improved the app, and I implemented the NestJS Config module, where TypeORM, Schema Validation, and JWT secrets were put in use, and the same could be said regarding environment variables, and did more error handling and spotting/logging.
+
+It was challenging to memorize, and I learned a bunch of things that I'll have to try to remember when needed. All in all, this was fun.
+
 
 Commands used:
 
-```bash
+```
 yarn global add @nestjs/cli
 nest -v
 nest new nestjs-task-management (chose yarn over npm in this case)
@@ -32,5 +43,16 @@ docker container start 'name of container or ID without quotes'
 docker container rm 'name of container or ID without quotes'
 yarn add typeorm @nestjs/typeorm pg
 yarn remove uuid (good practice to remove packages that you don't use anymore)
-
+nest g module auth
+nest g service auth --no-spec
+nest g controller auth --no-spec
+yarn add bcrypt
+yarn add @nestjs/jwt @nestjs/passport passport passport-jwt
+yarn add @types/passport-jwt
+yarn global add cross-env
+"start:dev": "cross-env STAGE=dev nest start --watch",
+yarn add @nestjs/config
+replaced "start:dev": "cross-env STAGE=dev nest start --watch,  (Did the same with debug, prod, and test)
+yarn add @hapi/joi
+yarn add -D @types/hapi__joi
 ```
