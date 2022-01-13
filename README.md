@@ -52,7 +52,7 @@ yarn add @types/passport-jwt
 yarn global add cross-env
 "start:dev": "cross-env STAGE=dev nest start --watch",
 yarn add @nestjs/config
-replaced "start:dev": "cross-env STAGE=dev nest start --watch,  (Did the same with debug, prod, and test)
+replaced "start:dev": "cross-env STAGE=dev nest start --watch,  (same with debug, prod, and test)
 yarn add @hapi/joi
 yarn add -D @types/hapi__joi
 ```
