@@ -6,8 +6,7 @@ I installed the NestJS CLI and made use of nest, npm, and yarn commands, althoug
 
 From the very basics, when we're talking about Modules, Controllers, Providers, and Services, to the use of DTO's, repositories, entities,statuses, imports, exports, directories, types, uuid's, etc.
 
-<!-- Commands used:
-
+Commands used:
 yarn global add @nestjs/cli
 nest -v
 nest new nestjs-task-management (chose yarn over npm in this case)
@@ -17,4 +16,4 @@ nest g module tasks
 yarn start:dev
 nest g controller tasks --no-spec
 nest g service tasks --no-spec
-yarn add uuid -->
+yarn add uuid
