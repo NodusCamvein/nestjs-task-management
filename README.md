@@ -18,8 +18,11 @@ Further emphasis on tasks and users, with database relation. Introduction to One
 
 I was surprised that configurations were a "thing", it improved the app, and I implemented the NestJS Config module, where TypeORM, Schema Validation, and JWT secrets were put in use, and the same could be said regarding environment variables, and did more error handling and spotting/logging.
 
-It was challenging to memorize, and I learned a bunch of things that I'll have to try to remember when needed. All in all, this was fun.
+Made use of the front-end application provided by the course, and enabled Cors: https://github.com/arielweinberger/task-management-frontend
 
+Installed and deployed NestJS app to Heroku, making use of the provided database credentials, and ssl for security.
+
+It was challenging to memorize, and I learned a bunch of things that I'll have to try to remember when needed. All in all, this was fun.
 
 Commands used:
 
@@ -55,4 +58,20 @@ yarn add @nestjs/config
 replaced "start:dev": "cross-env STAGE=dev nest start --watch,  (same with debug, prod, and test)
 yarn add @hapi/joi
 yarn add -D @types/hapi__joi
+yarn global add heroku
+heroku -v
+heroku login
+heroku addons:create heroku-postgresql:hobby-dev -a 'name of the app without quotes'
+heroku git:remote -a 'name of the app without quotes'
+heroku config:set NPM_CONFIG_PRODUCTION=false
+heroku config:set NODE_ENV=production
+heroku config:set STAGE=prod
+```
+
+Front-end Commands:
+
+```
+yarn
+yarn upgrade
+yarn start
 ```
