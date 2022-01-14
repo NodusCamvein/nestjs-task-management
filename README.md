@@ -66,6 +66,13 @@ heroku git:remote -a 'name of the app without quotes'
 heroku config:set NPM_CONFIG_PRODUCTION=false
 heroku config:set NODE_ENV=production
 heroku config:set STAGE=prod
+ heroku config:set DB_HOST=
+ heroku config:set DB_PORT=
+ heroku config:set DB_USERNAME=
+ heroku config:set DB_PASSWORD=
+ heroku config:set DB_DATABASE=
+ heroku config:set DB_DATABASE=
+ heroku config:set JWT_SECRET=
 ```
 
 Front-end Commands:
