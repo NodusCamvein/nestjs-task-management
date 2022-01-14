@@ -25,7 +25,6 @@ Installed and deployed NestJS app to Heroku, making use of the provided database
 It was challenging to memorize, and I learned a bunch of things that I'll have to try to remember when needed. All in all, this was fun.
 
 Commands used:
-
 ```
 yarn global add @nestjs/cli
 nest -v
@@ -66,21 +65,20 @@ heroku git:remote -a 'name of the app without quotes'
 heroku config:set NPM_CONFIG_PRODUCTION=false
 heroku config:set NODE_ENV=production
 heroku config:set STAGE=prod
- heroku config:set DB_HOST=
- heroku config:set DB_PORT=
- heroku config:set DB_USERNAME=
- heroku config:set DB_PASSWORD=
- heroku config:set DB_DATABASE=
- heroku config:set DB_DATABASE=
- heroku config:set JWT_SECRET=
- git add .
- git commit -m "Going live"
- git push -f heroku HEAD:master
- heroku logs --tail
+heroku config:set DB_HOST=
+heroku config:set DB_PORT=
+heroku config:set DB_USERNAME=
+heroku config:set DB_PASSWORD=
+heroku config:set DB_DATABASE=
+heroku config:set DB_DATABASE=
+heroku config:set JWT_SECRET=
+git add .
+git commit -m "Going live"
+git push -f heroku HEAD:master
+heroku logs --tail
 ```
 
 Front-end Commands:
-
 ```
 yarn
 yarn upgrade
