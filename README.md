@@ -73,6 +73,10 @@ heroku config:set STAGE=prod
  heroku config:set DB_DATABASE=
  heroku config:set DB_DATABASE=
  heroku config:set JWT_SECRET=
+ git add .
+ git commit -m "Going live"
+git push -f heroku HEAD:master
+ heroku logs --tail
 ```
 
 Front-end Commands:
